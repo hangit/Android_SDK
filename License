@@ -1,0 +1,27 @@
+Copyright (c) HangIt, LLC, all rights reserved.
+Subject to and conditioned on your compliance with the terms and conditions of this 
+license, you have permission to (1) download, (2) use, (3) extend the capabilities 
+of (without modification), (4) copy and/or (5) distribute this software, in each 
+case solely for the development and testing of your application, provided that 
+the copyright notice, list of permissions and disclaimer must appear in all copies 
+of the software, documentation and/or other materials provided with any copy or 
+distribution. This license does not grant you the authority to access the production 
+HangIt platform or take your application "Live".
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES 
+OF TITLE AND WARRANTIES AGAINST INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS OF A 
+THIRD PARTY ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS 
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY 
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT(INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN 
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+It is free to use the SDK and deliver notifications based on public campaigns. 
+Additional HangIt Platform features such as notification events and creation 
+of localized private messages can be accessed through the HangIt Platform and 
+its accompanying terms. If you want to establish a test campaign, please contact 
+HangIt at sdk@hangit.com.
