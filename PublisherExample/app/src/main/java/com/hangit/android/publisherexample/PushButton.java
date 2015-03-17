@@ -7,7 +7,9 @@ import android.widget.Button;
 
 import com.hangit.android.hangit_sdk.UIMainActivity;
 
-
+/**
+ * The PushButton activity demonstrates how an application can open a prebuilt HangIT activity.
+ */
 public class PushButton extends ActionBarActivity {
     private static final String START_ACTIVITY_SOURCE = "EXAMPLE_PUSH_BUTTON";
     private Button launchHangITButton;

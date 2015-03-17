@@ -10,7 +10,9 @@ import com.hangit.android.hangit_sdk.HangITClient;
 import com.hangit.android.hangit_sdk.ManagerGeneral;
 import com.hangit.android.hangit_sdk.ModelBoundingBoxResponse;
 
-
+/**
+ * The ClearUser activity is a utility activity allowin a reset of the device in the HangIT system.
+ */
 public class ClearUser extends ActionBarActivity implements HangITClient.HangITClientEventListener {
 
     @Override
@@ -25,21 +27,17 @@ public class ClearUser extends ActionBarActivity implements HangITClient.HangITC
 
     @Override
     public void onBoundingBoxNetworkFailure(String s) {
-
     }
 
     @Override
     public void onBoundingBoxChange(ModelBoundingBoxResponse modelBoundingBoxResponse) {
-
     }
 
     @Override
     public void onHangITClientFailureEvent(int i, int i2) {
-
     }
 
     @Override
     public void onPlaceEncountered(HangITBoundingBox[] hangITBoundingBoxes) {
-
     }
 }

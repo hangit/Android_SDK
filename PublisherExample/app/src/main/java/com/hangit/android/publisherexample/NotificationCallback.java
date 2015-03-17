@@ -8,6 +8,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
+/**
+ * The NotificationCallBack activity demonstrates how an application might customize the
+ * down press event of a HangIT initiated notification.
+ */
 public class NotificationCallback extends ActionBarActivity {
 
     TextView campaignName;

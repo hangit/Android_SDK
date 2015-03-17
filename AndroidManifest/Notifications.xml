@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hangit.android.publisherexample" >
-
+    package="com.hangit.android.publisherexample" >
+    
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -10,18 +10,20 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
+    
     <meta-data
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
-
+    
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="HangIT SDK Example"
         android:theme="@style/AppTheme" >
-
         <service android:name="com.hangit.android.hangit_sdk.ServiceHangITLocation" >
+            <meta-data
+            android:name="com.hangit.android.hangit_sdk.notification_icon"
+            android:value="ic_launcher" />
         </service>
         <service android:name="com.hangit.android.hangit_sdk.ServiceActivityRecognition" />
         <receiver android:name="com.hangit.android.hangit_sdk.ReceiverBootup" >
@@ -30,7 +32,7 @@
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
-
+        
         <activity
             android:name=".BackgroundOnly"
             android:label="Background Only" >
@@ -38,6 +40,12 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".NotificationCallback"
+            android:label="Notification Callback"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 </manifest>

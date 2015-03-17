@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hangit.android.publisherexample" >
+    package="com.hangit.android.publisherexample" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -20,10 +20,23 @@
         android:icon="@mipmap/ic_launcher"
         android:label="HangIT SDK Example"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="[YOUR GOOGLE API KEY]" />
+
+        <activity
+            android:name=".PushButton"
+            android:label="Push Button" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <service android:name="com.hangit.android.hangit_sdk.ServiceHangITLocation" >
         </service>
         <service android:name="com.hangit.android.hangit_sdk.ServiceActivityRecognition" />
+
         <receiver android:name="com.hangit.android.hangit_sdk.ReceiverBootup" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -31,13 +44,13 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name="com.hangit.android.hangit_sdk.UIMainActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".BackgroundOnly"
-            android:label="Background Only" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name="com.hangit.android.hangit_sdk.UIADUnitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hangit.android.hangit_sdk.UIWebViewActivity"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>
