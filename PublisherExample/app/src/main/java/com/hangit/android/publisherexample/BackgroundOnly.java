@@ -28,6 +28,12 @@ public class BackgroundOnly extends ActionBarActivity implements HangITClient.Ha
         ManagerGeneral.getHangITClient().initialize(this, getString(R.string.hangit_sdk_key));
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ManagerGeneral.getHangITClient().onPause(this);
+    }
+
     /**
      * This callback is fired when the device encounters a place.
      * @param hangITBoundingBoxes An array of boxes encountered.
@@ -48,12 +54,12 @@ public class BackgroundOnly extends ActionBarActivity implements HangITClient.Ha
 
     /**
      * This call back is fired when there is a network failure when attempting to communicate
-     * with the HangIT server.
+     * with the HangIT server or when an invalid SDK key is provided.
      * @param s A string message with additional information on the failure.
      */
     @Override
     public void onBoundingBoxNetworkFailure(String s) {
-        Toast.makeText(this, "A network failure occurred.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "A network failure occurred. Message : " + s, Toast.LENGTH_SHORT).show();
     }
 
     /**
