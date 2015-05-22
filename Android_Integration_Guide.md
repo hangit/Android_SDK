@@ -1,6 +1,5 @@
 
-
-<h1>Hangit Android SDK</h1>
+<h1>Hangit Android SDK Integration Guide</h1>
 
 <h2>Overview</h2>
 
