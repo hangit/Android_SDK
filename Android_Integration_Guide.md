@@ -189,6 +189,13 @@ MainActivity onCreate
 ManagerGeneral.getHangITClient().initialize(this, getString(R.string.hangit_sdk_key));
 ```
 
+The `HangITClient.onPause()` method is required to handle background services when application is paused or destroyed.  Add the following code snippet in the `onPause` method of the Activity.
+
+```objective-c
+MainActivity onPause
+ManagerGeneral.getHangITClient().onPause(this);
+```
+
 <h3>Creating the Activity Class</h3>
 
 After an event is received and the HangItClient sends a notification to the device, the notification will open the activity configured in Android Manifest at `"Meta-data android:name=com.hangit.android.hangit_sdk.notification_activity"` under the `<service android:name="com.hangit.android.hangit_sdk.ServiceHangITLocation">` node. The HangItClient will pass key values on an intent to the `NotificationActivityClass.` The code below outlines a sample Activity class accepting the intent with a list of data points available.
