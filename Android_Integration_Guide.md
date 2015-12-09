@@ -249,9 +249,10 @@ Since the Deals Program is most often implemented by game apps, the language bel
 	 - The Deals screen should contain the following text: "[Game Name] includes a Deals feature that rewards you for certain in-game events and helps fund further development of the game. As you advance within [Game Name], progressively better deals will be unlocked.  [Game Name] will notify you of these special deals as you move about your daily routine."
 	 - "We use patent-pending technology that minimizes battery drain on your device."
 	 - The screen should contain an "On/Off" switch, which should default on.
-	 - If the switch is set to "off," [Method to call?]
-	 - If the switch is subsequently re-set to "on," [Method to call?]
- - At the end of each game, HangIt should be notified of the user's score.  See the CURL example APIs below to notify HangIt of the user's score.  If your game does not assign a score, a proxy for progress may be sent to HangIt, example: level number.
+	 - If the switch is set to "off," [<b>Method to call?</b>]
+	 - If the switch is subsequently re-set to "on," [<b>Method to call?</b>]
+ - At the end of each game, HangIt should be notified of the user's score.  See the CURL example APIs below to notify HangIt of the user's score.
+ - If your game does not assign a score, a proxy for progress may be sent to HangIt, example: level number.
 
 Adding custom metadata
 ```
