@@ -235,6 +235,48 @@ public class OfferNotificationActivity extends Activity {
 }
 ```
 
-	
+<h2>Deals Program ** RECOMMENDED **</h2>
+
+Google requires that advertisements delivered via system level notifications be "part of the explicit feature set of the app."  If your app does not inherently include an explicit feature set by which ads may be delivered via notification (for example, most mobile games lack such an inherent feature), we recommend implementing the HangIt SDK as part of a Deals Program, as set forth below.
+
+The Deals Program provides app users the benefit of location-based discounts. These discounts are tied to app usage.
+
+Since the Deals Program is most often implemented by game apps, the language below refers to "games" and "game play". But the Program could be applied to user activity in most other apps (eg, shopping in m-commerce, etc).
+
+<h3>Overview</h3>
+
+ - A "Deals" item is added to the game's main menu. Tapping the "Deals" item should lead to a Deals screen.
+	 - The Deals screen should contain the following text: "[Game Name] includes a Deals feature that rewards you for certain in-game events and helps fund further development of the game. As you advance within [Game Name], progressively better deals will be unlocked.  [Game Name] will notify you of these special deals as you move about your daily routine."
+	 - "We use patent-pending technology that minimizes battery drain on your device."
+	 - The screen should contain an "On/Off" switch, which should default on.
+	 - If the switch is set to "off," use the HangITClient.initialize() method to start it.
+	 - If the switch is subsequently re-set to "on," use stopAllServices to stop it.
+ - At the end of each game, HangIt should be notified of the user's score.  See the CURL example APIs below to notify HangIt of the user's score.
+ - If your game does not assign a score, a proxy for progress may be sent to HangIt, example: level number.
+
+The HangITClient.initialize() method is used to start the HangIt service.
+```
+ManagerGeneral.getHangITClient().initialize(myContext, ManagerGeneral.getHangITClient().getSDKKey(),ManagerGeneral.getHangITClient().getSecretKey());
+```
+
+The HangIt service is stopped with stopAllServices.
+```
+ManagerGeneral.getHangITClient().stopAllServices(myContext);
+```
+
+Adding custom metadata
+```
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"sessionKey": 
+"d44bb5f0-9a9e-11e5-b198-0ba40ead5f1c", "tag":"high score", "tagValue":"10000", "groupTag":"AWESOME GAME"}' 
+http://portal.hangit.com/v1/devicetag/update
+```
+
+Deleting custom metadata
+```
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"sessionKey": 
+"d44bb5f0-9a9e-11e5-b198-0ba40ead5f1c", "tag":"high score", "tagValue":"10000", "groupTag":"AWESOME GAME"}'  
+http://portal.hangit.com/v1/devicetag/deactivate
+```
+
 
 > Written with [StackEdit](https://stackedit.io/).
