@@ -264,6 +264,11 @@ The HangIt service is stopped with stopAllServices.
 ManagerGeneral.getHangITClient().stopAllServices(myContext);
 ```
 
+The HangIt Wallet is opened with the following command.
+```
+ManagerGeneral.openWallet(myContext);
+```
+
 Adding custom metadata
 ```
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"sessionKey": 
